@@ -5,5 +5,11 @@
      error: .asciiz "Input too long"
 .text
 main:
+     addi $t7, $zero, 16
+     li $v0, 8
+     la $a0, max_input
+     syscall
+     
+     
      
           

@@ -54,3 +54,13 @@ go_back__to_beginning:
   la $t3, 0             #reset the counter
 
 go_forward:
+  lb $t1,0($t0) #Load bit of string
+  addi $t0, $t0, 1
+  beq $t1, 32, go_forward #Forward through string
+  addi $t0, $t0, -1
+find_length:
+  lb $t1, ($t0)
+  addi $t0, $t0, 1
+  addi $t3, $t3, 1
+  beq $t1, 10, loop_assist 
+  beq $t1, 0, loop_assist

@@ -83,3 +83,9 @@ multiply:
   mult $t1, $t4
   mflo $t5            #sub_sum
   add $t6, $t6, $t5     #final sum
+  beq $t4, 1, Exit
+  div $t4, $s0 #dividing t4 to the next power of base
+  mflo $t4
+  add $t0, $t0, 1
+  lb $t1,0($t0)
+  j Ascii_converter

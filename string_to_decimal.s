@@ -33,3 +33,11 @@ skip_spaces:
   beq $t1, 32, skip_spaces
   beq $t1, 10, Empty_Error
   beq $t1, $0, Empty_Error
+
+see_some_chars:
+  lb $t1,0($t0)
+  addi $t0, $t0, 1
+  addi $t3, $t3, 1
+  beq $t1, 10, go_back_beginning
+  beq $t1, 0, go_back_beginning
+  bne $t1, 32, see_some_chars

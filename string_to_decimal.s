@@ -106,8 +106,11 @@ Ascii_converter:
 Upper_Case:
   addi $t1, $t1, -55
   j multiply
-
 Lower_Case:
-addi $t1, $t1, -87
-j multiply
+  addi $t1, $t1, -87
+  j multiply
+Number:
+  addi $t1, $t1, -48
+  j multiply
+
 

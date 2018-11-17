@@ -25,3 +25,11 @@ addi $s0, $0, 35 #Iniatialize registers to be used later
 addi $t4, $0, 1
 addi $t5, $0, 0
 addi $t6, $0, 0
+
+skip_spaces:
+  lb $t1,0($t0)
+  addi $t0, $t0, 1
+  addi $t3, $t3, 1
+  beq $t1, 32, skip_spaces
+  beq $t1, 10, Empty_Error
+  beq $t1, $0, Empty_Error

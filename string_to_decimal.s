@@ -125,3 +125,7 @@ Too_Long_Error:
   syscall
   li $v0,10 #ends program
   syscall
+Invalid_Base_Error:
+  la $a0, invalid_base_number #loads string
+  li $v0, 4
+  syscall

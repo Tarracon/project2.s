@@ -129,3 +129,6 @@ Invalid_Base_Error:
   la $a0, invalid_base_number #loads string
   li $v0, 4
   syscall
+  li $v0,10 #end program
+  syscall
+  jr $ra

@@ -1,15 +1,6 @@
-#Started CompOrg Project 2
-#project2code.s
-.data #Declare variables to be used in program
-     max_input: .space 4
-     error: .asciiz "Input too long"
+.data
+invalid_length: .asciiz "Input is too long."
+invalid_base_number: .asciiz "Invalid base-35 number." #<----- replace with your base-N!!!!
+input_empty: .asciiz "Input is empty."
+input_string: .space 40000
 .text
-main:
-     addi $t7, $zero, 16
-     li $v0, 8
-     la $a0, max_input
-     syscall
-     
-     
-     
-          

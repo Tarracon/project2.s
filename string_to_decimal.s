@@ -112,5 +112,9 @@ Lower_Case:
 Number:
   addi $t1, $t1, -48
   j multiply
-
+#BRANCHES FOR ERROR MESSAGES
+Empty_Error:
+  la $a0, input_empty #loads string
+  li $v0, 4
+  syscall
 

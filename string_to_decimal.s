@@ -95,3 +95,8 @@ Exit:
   syscall
   li $v0,10 # Load command to end program
   syscall
+Ascii_converter:
+  blt $t1, 48, Invalid_Base_Error #checks if character is before 0 in ASCII chart
+  blt $t1, 58, Number #checks if character is between 48 and 57
+  blt $t1, 65, Invalid_Base_Error #checks if character is between 58 and 64
+  blt $t1, 90, Upper_Case #checks if character is between 65 and 85

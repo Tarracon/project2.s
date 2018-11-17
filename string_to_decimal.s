@@ -64,3 +64,9 @@ find_length:
   addi $t3, $t3, 1
   beq $t1, 10, loop_assist 
   beq $t1, 0, loop_assist
+  beq $t1, 32, loop_assist
+  beq $t3, 5, Length_Error
+  j find_length
+
+loop_assist:
+sub $t0, $t0, $t3

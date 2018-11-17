@@ -73,3 +73,9 @@ loop_assist:
   sub $t3, $t3, $t4
   lb $t1, ($t0) #Load bits from string
   sub $s1, $t3, $t4
+Find_greatest_power:
+  beq $s1, 0, Ascii_converter        #Bringing base to last power of the string
+  mult $t4, $s0
+  mflo $t4
+  sub $s1, $s1, 1
+  j Find_greatest_power

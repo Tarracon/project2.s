@@ -120,4 +120,8 @@ Empty_Error:
   li $v0,10 #ends program
   syscall
 Too_Long_Error:
-la $a0, invalid_length #loads string
+  la $a0, invalid_length #loads string
+  li $v0, 4
+  syscall
+  li $v0,10 #ends program
+  syscall

@@ -79,3 +79,7 @@ Find_greatest_power:
   mflo $t4
   sub $s1, $s1, 1
   j Find_greatest_power
+multiply:
+  mult $t1, $t4
+  mflo $t5            #sub_sum
+  add $t6, $t6, $t5     #final sum

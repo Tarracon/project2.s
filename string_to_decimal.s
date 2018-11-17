@@ -117,4 +117,7 @@ Empty_Error:
   la $a0, input_empty #loads string
   li $v0, 4
   syscall
-
+  li $v0,10 #ends program
+  syscall
+Too_Long_Error:
+la $a0, invalid_length #loads string

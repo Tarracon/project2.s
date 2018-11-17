@@ -89,3 +89,9 @@ multiply:
   add $t0, $t0, 1
   lb $t1,0($t0)
   j Ascii_converter
+Exit:
+  move $a0, $t6 #moves sum to a0
+  li $v0, 1 #prints contents of a0
+  syscall
+  li $v0,10 # Load command to end program
+  syscall

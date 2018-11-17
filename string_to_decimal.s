@@ -69,4 +69,7 @@ find_length:
   j find_length
 
 loop_assist:
-sub $t0, $t0, $t3
+  sub $t0, $t0, $t3 #Subtract from registers to regulate loops
+  sub $t3, $t3, $t4
+  lb $t1, ($t0) #Load bits from string
+  sub $s1, $t3, $t4
